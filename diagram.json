@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "ARINC429-arduino",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 10, "left": 10, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": 180, "left": 20, "attrs": { "pins": "i2c", "i2c-address": "0x27" } },
+    { "type": "wokwi-led", "id": "led1", "top": 40, "left": 280, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "led0", "top": 100, "left": 280, "attrs": { "color": "yellow" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 40, "left": 240, "rotate": 90, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r0", "top": 100, "left": 240, "rotate": 90, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "uno:GND.1", "lcd1:GND", "black", [ ] ],
+    [ "uno:5V", "lcd1:VCC", "red", [ ] ],
+    [ "uno:A4", "lcd1:SDA", "green", [ ] ],
+    [ "uno:A5", "lcd1:SCL", "blue", [ ] ],
+    [ "uno:13", "r1:1", "red", [ ] ],
+    [ "r1:2", "led1:A", "red", [ ] ],
+    [ "led1:C", "uno:GND.2", "black", [ ] ],
+    [ "uno:12", "r0:1", "orange", [ ] ],
+    [ "r0:2", "led0:A", "orange", [ ] ],
+    [ "led0:C", "uno:GND.2", "black", [ ] ]
+  ],
+  "dependencies": {}
+}

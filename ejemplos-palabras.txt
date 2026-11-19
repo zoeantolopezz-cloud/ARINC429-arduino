@@ -1,0 +1,22 @@
+# Palabras válidas ARINC 429 de ejemplo
+# Se aceptan solo en formato hexadecimal 0xXXXXXXXX o como 32 caracteres binarios.
+
+# Label octal 313 (decimal 203), valor 12345
+0x0181C8C1
+00000001100000011100100011000001
+
+# Label octal 313 (decimal 203), valor 0
+0x000000C1
+00000000000000000000000011000001
+
+# Label octal 322 (decimal 210), valor 1800
+0x80384011
+10000000001110000100000000010001
+
+# Label octal 571 (decimal 377), valor 262143
+0x9FFFF8FF
+1001111111111111111110001111111
+
+# Ejemplos con paridad incorrecta para verificar el rechazo
+0x0181C8C0
+# 00000001100000011100100011000000
